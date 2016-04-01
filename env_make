@@ -1,0 +1,5 @@
+# Example environment. Adjust these values to meet your needs.
+PORTS = -p 80:80 -p 443:443
+VOLUMES = \
+	-v $$(pwd)/server.key:/etc/nginx/server.key \
+	-v $$(pwd)/server.crt:/etc/nginx/server.crt
