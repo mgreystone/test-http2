@@ -1,3 +1,5 @@
 *.crt
 *.csr
 *.key
+jspm_packages
+node_modules

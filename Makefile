@@ -7,6 +7,8 @@ VERSION = 0.0.1
 .PHONY: build start stop rm shell
 
 build:
+	npm install
+	npm run build
 	docker build -t $(NS)/$(NAME):$(VERSION) .
 
 start: 
@@ -19,7 +21,7 @@ rm:
 	docker rm $(NAME)
 
 run:
-	docker run --rm --name $(NAME) -i -t $(PORTS) $(VOLUMES) $(NS)/$(NAME):$(VERSION)
+	docker run --rm --name $(NAME) $(PORTS) $(VOLUMES) $(NS)/$(NAME):$(VERSION)
 
 shell:
 	docker run --rm --name $(NAME) -i -t $(PORTS) $(VOLUMES) $(NS)/$(NAME):$(VERSION) /bin/bash
