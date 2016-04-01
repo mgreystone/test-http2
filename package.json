@@ -19,6 +19,7 @@
     },
     "dependencies": {
       "jspm-loader-jsx": "npm:jspm-loader-jsx@^0.0.7",
+      "lodash": "npm:lodash@^4.7.0",
       "react": "npm:react@^0.14.8",
       "react-dom": "npm:react-dom@^0.14.8"
     },

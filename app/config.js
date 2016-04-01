@@ -1,13 +1,7 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "babel",
-  babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
-    ]
-  },
+  transpiler: false,
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -16,7 +10,8 @@ System.config({
   depCache: {
     "main.js": [
       "react",
-      "react-dom"
+      "react-dom",
+      "./components/app"
     ],
     "npm:react@0.14.8.js": [
       "npm:react@0.14.8/react.js"
@@ -832,6 +827,607 @@ System.config({
     "npm:fbjs@0.6.1/lib/toArray.js": [
       "./invariant",
       "process"
+    ],
+    "components/app.js": [
+      "react",
+      "./image"
+    ],
+    "components/image.js": [
+      "react",
+      "lodash/times"
+    ],
+    "npm:lodash@4.7.0/fp/times.js": [
+      "./convert",
+      "../times"
+    ],
+    "npm:lodash@4.7.0/fp/convert.js": [
+      "./_baseConvert",
+      "./_util"
+    ],
+    "npm:lodash@4.7.0/times.js": [
+      "./_baseIteratee",
+      "./_baseTimes",
+      "./toInteger"
+    ],
+    "npm:lodash@4.7.0/fp/_util.js": [
+      "../ary",
+      "../_baseAssign",
+      "../clone",
+      "../curry",
+      "../_arrayEach",
+      "../isArray",
+      "../isFunction",
+      "../iteratee",
+      "../_baseKeys",
+      "../rearg",
+      "../spread",
+      "../toPath"
+    ],
+    "npm:lodash@4.7.0/fp/_baseConvert.js": [
+      "./_mapping"
+    ],
+    "npm:lodash@4.7.0/_baseIteratee.js": [
+      "./_baseMatches",
+      "./_baseMatchesProperty",
+      "./identity",
+      "./isArray",
+      "./property"
+    ],
+    "npm:lodash@4.7.0/toInteger.js": [
+      "./toNumber"
+    ],
+    "npm:lodash@4.7.0/ary.js": [
+      "./_createWrapper"
+    ],
+    "npm:lodash@4.7.0/_baseAssign.js": [
+      "./_copyObject",
+      "./keys"
+    ],
+    "npm:lodash@4.7.0/clone.js": [
+      "./_baseClone"
+    ],
+    "npm:lodash@4.7.0/curry.js": [
+      "./_createWrapper"
+    ],
+    "npm:lodash@4.7.0/isFunction.js": [
+      "./isObject"
+    ],
+    "npm:lodash@4.7.0/iteratee.js": [
+      "./_baseClone",
+      "./_baseIteratee"
+    ],
+    "npm:lodash@4.7.0/rearg.js": [
+      "./_baseFlatten",
+      "./_createWrapper",
+      "./rest"
+    ],
+    "npm:lodash@4.7.0/spread.js": [
+      "./_apply",
+      "./_arrayPush",
+      "./rest",
+      "./toInteger"
+    ],
+    "npm:lodash@4.7.0/toPath.js": [
+      "./_arrayMap",
+      "./_baseCastKey",
+      "./_copyArray",
+      "./isArray",
+      "./isSymbol",
+      "./_stringToPath"
+    ],
+    "npm:lodash@4.7.0/_baseMatches.js": [
+      "./_baseIsMatch",
+      "./_getMatchData"
+    ],
+    "npm:lodash@4.7.0/_baseMatchesProperty.js": [
+      "./_baseIsEqual",
+      "./get",
+      "./hasIn"
+    ],
+    "npm:lodash@4.7.0/property.js": [
+      "./_baseProperty",
+      "./_basePropertyDeep",
+      "./_isKey"
+    ],
+    "npm:lodash@4.7.0/toNumber.js": [
+      "./isFunction",
+      "./isObject",
+      "./isSymbol",
+      "process"
+    ],
+    "npm:lodash@4.7.0/_createWrapper.js": [
+      "./_baseSetData",
+      "./_createBaseWrapper",
+      "./_createCurryWrapper",
+      "./_createHybridWrapper",
+      "./_createPartialWrapper",
+      "./_getData",
+      "./_mergeData",
+      "./_setData",
+      "./toInteger"
+    ],
+    "npm:lodash@4.7.0/keys.js": [
+      "./_baseHas",
+      "./_baseKeys",
+      "./_indexKeys",
+      "./isArrayLike",
+      "./_isIndex",
+      "./_isPrototype"
+    ],
+    "npm:lodash@4.7.0/_copyObject.js": [
+      "./_copyObjectWith"
+    ],
+    "npm:lodash@4.7.0/_baseClone.js": [
+      "./_Stack",
+      "./_arrayEach",
+      "./_assignValue",
+      "./_baseAssign",
+      "./_cloneBuffer",
+      "./_copyArray",
+      "./_copySymbols",
+      "./_getAllKeys",
+      "./_getTag",
+      "./_initCloneArray",
+      "./_initCloneByTag",
+      "./_initCloneObject",
+      "./isArray",
+      "./isBuffer",
+      "./_isHostObject",
+      "./isObject",
+      "./keys"
+    ],
+    "npm:lodash@4.7.0/_baseFlatten.js": [
+      "./_arrayPush",
+      "./isArguments",
+      "./isArray",
+      "./isArrayLikeObject"
+    ],
+    "npm:lodash@4.7.0/rest.js": [
+      "./_apply",
+      "./toInteger"
+    ],
+    "npm:lodash@4.7.0/_baseCastKey.js": [
+      "./isSymbol"
+    ],
+    "npm:lodash@4.7.0/isSymbol.js": [
+      "./isObjectLike"
+    ],
+    "npm:lodash@4.7.0/_stringToPath.js": [
+      "./memoize",
+      "./toString"
+    ],
+    "npm:lodash@4.7.0/_baseIsMatch.js": [
+      "./_Stack",
+      "./_baseIsEqual"
+    ],
+    "npm:lodash@4.7.0/_getMatchData.js": [
+      "./_isStrictComparable",
+      "./toPairs"
+    ],
+    "npm:lodash@4.7.0/_baseIsEqual.js": [
+      "./_baseIsEqualDeep",
+      "./isObject",
+      "./isObjectLike"
+    ],
+    "npm:lodash@4.7.0/get.js": [
+      "./_baseGet"
+    ],
+    "npm:lodash@4.7.0/hasIn.js": [
+      "./_baseHasIn",
+      "./_hasPath"
+    ],
+    "npm:lodash@4.7.0/_basePropertyDeep.js": [
+      "./_baseGet"
+    ],
+    "npm:lodash@4.7.0/_isKey.js": [
+      "./isArray",
+      "./isSymbol"
+    ],
+    "npm:lodash@4.7.0/_baseSetData.js": [
+      "./identity",
+      "./_metaMap"
+    ],
+    "npm:lodash@4.7.0/_createBaseWrapper.js": [
+      "./_createCtorWrapper",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_createCurryWrapper.js": [
+      "./_apply",
+      "./_createCtorWrapper",
+      "./_createHybridWrapper",
+      "./_createRecurryWrapper",
+      "./_getPlaceholder",
+      "./_replaceHolders",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_createHybridWrapper.js": [
+      "./_composeArgs",
+      "./_composeArgsRight",
+      "./_countHolders",
+      "./_createCtorWrapper",
+      "./_createRecurryWrapper",
+      "./_getPlaceholder",
+      "./_reorder",
+      "./_replaceHolders",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_createPartialWrapper.js": [
+      "./_apply",
+      "./_createCtorWrapper",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_getData.js": [
+      "./_metaMap",
+      "./noop"
+    ],
+    "npm:lodash@4.7.0/_mergeData.js": [
+      "./_composeArgs",
+      "./_composeArgsRight",
+      "./_copyArray",
+      "./_replaceHolders"
+    ],
+    "npm:lodash@4.7.0/_setData.js": [
+      "./_baseSetData",
+      "./now"
+    ],
+    "npm:lodash@4.7.0/_baseHas.js": [
+      "./_getPrototype"
+    ],
+    "npm:lodash@4.7.0/_indexKeys.js": [
+      "./_baseTimes",
+      "./isArguments",
+      "./isArray",
+      "./isLength",
+      "./isString"
+    ],
+    "npm:lodash@4.7.0/isArrayLike.js": [
+      "./_getLength",
+      "./isFunction",
+      "./isLength"
+    ],
+    "npm:lodash@4.7.0/_copyObjectWith.js": [
+      "./_assignValue"
+    ],
+    "npm:lodash@4.7.0/_Stack.js": [
+      "./_stackClear",
+      "./_stackDelete",
+      "./_stackGet",
+      "./_stackHas",
+      "./_stackSet"
+    ],
+    "npm:lodash@4.7.0/_assignValue.js": [
+      "./eq"
+    ],
+    "npm:lodash@4.7.0/_copySymbols.js": [
+      "./_copyObject",
+      "./_getSymbols"
+    ],
+    "npm:lodash@4.7.0/_getAllKeys.js": [
+      "./_baseGetAllKeys",
+      "./_getSymbols",
+      "./keys"
+    ],
+    "npm:lodash@4.7.0/_getTag.js": [
+      "./_DataView",
+      "./_Map",
+      "./_Promise",
+      "./_Set",
+      "./_WeakMap"
+    ],
+    "npm:lodash@4.7.0/_initCloneByTag.js": [
+      "./_cloneArrayBuffer",
+      "./_cloneDataView",
+      "./_cloneMap",
+      "./_cloneRegExp",
+      "./_cloneSet",
+      "./_cloneSymbol",
+      "./_cloneTypedArray"
+    ],
+    "npm:lodash@4.7.0/_initCloneObject.js": [
+      "./_baseCreate",
+      "./_getPrototype",
+      "./_isPrototype"
+    ],
+    "npm:lodash@4.7.0/isArguments.js": [
+      "./isArrayLikeObject"
+    ],
+    "npm:lodash@4.7.0/isArrayLikeObject.js": [
+      "./isArrayLike",
+      "./isObjectLike"
+    ],
+    "npm:lodash@4.7.0/memoize.js": [
+      "./_MapCache"
+    ],
+    "npm:lodash@4.7.0/_isStrictComparable.js": [
+      "./isObject"
+    ],
+    "npm:lodash@4.7.0/toPairs.js": [
+      "./_baseToPairs",
+      "./keys"
+    ],
+    "npm:lodash@4.7.0/_baseIsEqualDeep.js": [
+      "./_Stack",
+      "./_equalArrays",
+      "./_equalByTag",
+      "./_equalObjects",
+      "./_getTag",
+      "./isArray",
+      "./_isHostObject",
+      "./isTypedArray"
+    ],
+    "npm:lodash@4.7.0/_baseGet.js": [
+      "./_baseCastPath",
+      "./_isKey"
+    ],
+    "npm:lodash@4.7.0/_cloneBuffer.js": [
+      "buffer"
+    ],
+    "npm:lodash@4.7.0/isBuffer.js": [
+      "./constant",
+      "./_root",
+      "buffer"
+    ],
+    "npm:lodash@4.7.0/toString.js": [
+      "./_Symbol",
+      "./isSymbol",
+      "process"
+    ],
+    "npm:lodash@4.7.0/_hasPath.js": [
+      "./_baseCastPath",
+      "./isArguments",
+      "./isArray",
+      "./_isIndex",
+      "./_isKey",
+      "./isLength",
+      "./isString"
+    ],
+    "npm:lodash@4.7.0/_metaMap.js": [
+      "./_WeakMap"
+    ],
+    "npm:lodash@4.7.0/_createCtorWrapper.js": [
+      "./_baseCreate",
+      "./isObject"
+    ],
+    "npm:lodash@4.7.0/_root.js": [
+      "./_checkGlobal"
+    ],
+    "npm:lodash@4.7.0/_createRecurryWrapper.js": [
+      "./_copyArray",
+      "./_isLaziable",
+      "./_setData"
+    ],
+    "npm:lodash@4.7.0/_reorder.js": [
+      "./_copyArray",
+      "./_isIndex"
+    ],
+    "npm:lodash@4.7.0/isString.js": [
+      "./isArray",
+      "./isObjectLike"
+    ],
+    "npm:lodash@4.7.0/_getLength.js": [
+      "./_baseProperty"
+    ],
+    "npm:lodash@4.7.0/_stackDelete.js": [
+      "./_assocDelete"
+    ],
+    "npm:lodash@4.7.0/_stackGet.js": [
+      "./_assocGet"
+    ],
+    "npm:lodash@4.7.0/_stackHas.js": [
+      "./_assocHas"
+    ],
+    "npm:lodash@4.7.0/_stackSet.js": [
+      "./_MapCache",
+      "./_assocSet"
+    ],
+    "npm:lodash@4.7.0/_baseGetAllKeys.js": [
+      "./_arrayPush",
+      "./isArray"
+    ],
+    "npm:lodash@4.7.0/_DataView.js": [
+      "./_getNative",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_Map.js": [
+      "./_getNative",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_Promise.js": [
+      "./_getNative",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_Set.js": [
+      "./_getNative",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_WeakMap.js": [
+      "./_getNative",
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_cloneArrayBuffer.js": [
+      "./_Uint8Array"
+    ],
+    "npm:lodash@4.7.0/_cloneDataView.js": [
+      "./_cloneArrayBuffer"
+    ],
+    "npm:lodash@4.7.0/_cloneMap.js": [
+      "./_addMapEntry",
+      "./_arrayReduce",
+      "./_mapToArray"
+    ],
+    "npm:lodash@4.7.0/_cloneSet.js": [
+      "./_addSetEntry",
+      "./_arrayReduce",
+      "./_setToArray"
+    ],
+    "npm:lodash@4.7.0/_cloneSymbol.js": [
+      "./_Symbol"
+    ],
+    "npm:lodash@4.7.0/_cloneTypedArray.js": [
+      "./_cloneArrayBuffer"
+    ],
+    "npm:lodash@4.7.0/_baseCreate.js": [
+      "./isObject"
+    ],
+    "npm:lodash@4.7.0/_MapCache.js": [
+      "./_mapClear",
+      "./_mapDelete",
+      "./_mapGet",
+      "./_mapHas",
+      "./_mapSet"
+    ],
+    "npm:lodash@4.7.0/_equalArrays.js": [
+      "./_arraySome"
+    ],
+    "npm:lodash@4.7.0/_baseToPairs.js": [
+      "./_arrayMap"
+    ],
+    "npm:lodash@4.7.0/_equalByTag.js": [
+      "./_Symbol",
+      "./_Uint8Array",
+      "./_equalArrays",
+      "./_mapToArray",
+      "./_setToArray"
+    ],
+    "npm:lodash@4.7.0/_equalObjects.js": [
+      "./_baseHas",
+      "./keys"
+    ],
+    "npm:lodash@4.7.0/isTypedArray.js": [
+      "./isLength",
+      "./isObjectLike"
+    ],
+    "npm:lodash@4.7.0/_baseCastPath.js": [
+      "./isArray",
+      "./_stringToPath"
+    ],
+    "github:jspm/nodelibs-buffer@0.1.0.js": [
+      "github:jspm/nodelibs-buffer@0.1.0/index"
+    ],
+    "npm:lodash@4.7.0/_Symbol.js": [
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_assocDelete.js": [
+      "./_assocIndexOf"
+    ],
+    "npm:lodash@4.7.0/_isLaziable.js": [
+      "./_LazyWrapper",
+      "./_getData",
+      "./_getFuncName",
+      "./wrapperLodash"
+    ],
+    "npm:lodash@4.7.0/_assocGet.js": [
+      "./_assocIndexOf"
+    ],
+    "npm:lodash@4.7.0/_assocHas.js": [
+      "./_assocIndexOf"
+    ],
+    "npm:lodash@4.7.0/_assocSet.js": [
+      "./_assocIndexOf"
+    ],
+    "npm:lodash@4.7.0/_getNative.js": [
+      "./isNative"
+    ],
+    "npm:lodash@4.7.0/_Uint8Array.js": [
+      "./_root"
+    ],
+    "npm:lodash@4.7.0/_mapClear.js": [
+      "./_Hash",
+      "./_Map"
+    ],
+    "npm:lodash@4.7.0/_mapDelete.js": [
+      "./_Map",
+      "./_assocDelete",
+      "./_hashDelete",
+      "./_isKeyable"
+    ],
+    "npm:lodash@4.7.0/_mapGet.js": [
+      "./_Map",
+      "./_assocGet",
+      "./_hashGet",
+      "./_isKeyable"
+    ],
+    "npm:lodash@4.7.0/_mapHas.js": [
+      "./_Map",
+      "./_assocHas",
+      "./_hashHas",
+      "./_isKeyable"
+    ],
+    "npm:lodash@4.7.0/_mapSet.js": [
+      "./_Map",
+      "./_assocSet",
+      "./_hashSet",
+      "./_isKeyable"
+    ],
+    "github:jspm/nodelibs-buffer@0.1.0/index.js": [
+      "buffer"
+    ],
+    "npm:lodash@4.7.0/_assocIndexOf.js": [
+      "./eq"
+    ],
+    "npm:lodash@4.7.0/_getFuncName.js": [
+      "./_realNames"
+    ],
+    "npm:lodash@4.7.0/wrapperLodash.js": [
+      "./_LazyWrapper",
+      "./_LodashWrapper",
+      "./_baseLodash",
+      "./isArray",
+      "./isObjectLike",
+      "./_wrapperClone"
+    ],
+    "npm:lodash@4.7.0/_LazyWrapper.js": [
+      "./_baseCreate",
+      "./_baseLodash"
+    ],
+    "npm:lodash@4.7.0/isNative.js": [
+      "./isFunction",
+      "./_isHostObject",
+      "./isObjectLike"
+    ],
+    "npm:lodash@4.7.0/_Hash.js": [
+      "./_nativeCreate"
+    ],
+    "npm:lodash@4.7.0/_hashDelete.js": [
+      "./_hashHas"
+    ],
+    "npm:lodash@4.7.0/_hashGet.js": [
+      "./_nativeCreate"
+    ],
+    "npm:lodash@4.7.0/_hashHas.js": [
+      "./_nativeCreate"
+    ],
+    "npm:buffer@3.6.0.js": [
+      "npm:buffer@3.6.0/index.js"
+    ],
+    "npm:lodash@4.7.0/_hashSet.js": [
+      "./_nativeCreate"
+    ],
+    "npm:lodash@4.7.0/_LodashWrapper.js": [
+      "./_baseCreate",
+      "./_baseLodash"
+    ],
+    "npm:lodash@4.7.0/_wrapperClone.js": [
+      "./_LazyWrapper",
+      "./_LodashWrapper",
+      "./_copyArray"
+    ],
+    "npm:lodash@4.7.0/_nativeCreate.js": [
+      "./_getNative"
+    ],
+    "npm:buffer@3.6.0/index.js": [
+      "base64-js",
+      "ieee754",
+      "isarray"
+    ],
+    "npm:base64-js@0.0.8.js": [
+      "npm:base64-js@0.0.8/lib/b64.js"
+    ],
+    "npm:ieee754@1.1.6.js": [
+      "npm:ieee754@1.1.6/index.js"
+    ],
+    "npm:isarray@1.0.0.js": [
+      "npm:isarray@1.0.0/index.js"
     ]
   },
 
@@ -840,6 +1436,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "jspm-loader-jsx": "npm:jspm-loader-jsx@0.0.7",
+    "lodash": "npm:lodash@4.7.0",
     "react": "npm:react@0.14.8",
     "react-dom": "npm:react-dom@0.14.8",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -924,6 +1521,10 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "source-map": "npm:source-map@0.1.31"
+    },
+    "npm:lodash@4.7.0": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:pascal-case@1.1.2": {
       "camel-case": "npm:camel-case@1.2.2",
