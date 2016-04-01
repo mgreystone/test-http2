@@ -5,7 +5,10 @@
 <link rel="stylesheet" href="style.css">
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
-<script>System.import('main.js')</script>
+<script>
+  start = performance.now()
+  System.import('main.js')
+</script>
 
 <body>
 <div id="app"></div>

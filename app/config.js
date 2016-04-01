@@ -833,6 +833,7 @@ System.config({
       "./image"
     ],
     "components/image.js": [
+      "es6-promise",
       "react",
       "lodash/times"
     ],
@@ -1428,6 +1429,12 @@ System.config({
     ],
     "npm:isarray@1.0.0.js": [
       "npm:isarray@1.0.0/index.js"
+    ],
+    "npm:es6-promise@3.1.2.js": [
+      "npm:es6-promise@3.1.2/dist/es6-promise.js"
+    ],
+    "npm:es6-promise@3.1.2/dist/es6-promise.js": [
+      "process"
     ]
   },
 
@@ -1435,6 +1442,7 @@ System.config({
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
+    "es6-promise": "npm:es6-promise@3.1.2",
     "jspm-loader-jsx": "npm:jspm-loader-jsx@0.0.7",
     "lodash": "npm:lodash@4.7.0",
     "react": "npm:react@0.14.8",
@@ -1497,6 +1505,9 @@ System.config({
       "jstransform": "npm:jstransform@10.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "through": "npm:through@2.3.8"
+    },
+    "npm:es6-promise@3.1.2": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:esprima-fb@13001.1001.0-dev-harmony-fb": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
