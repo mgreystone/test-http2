@@ -1,5 +1,7 @@
 *.crt
 *.csr
+*.map
 *.key
+bundle.js
 jspm_packages
 node_modules
