@@ -2,7 +2,7 @@ include env_make
 NS = mgreystone
 REPO = test-http2
 NAME = test-http2
-VERSION = 0.0.1
+VERSION = 0.0.2
 
 .PHONY: build start stop rm shell
 
