@@ -1,0 +1,21 @@
+web:
+  build: .
+  command: 'bash -c ''nginx -g "daemon off;"'''
+  working_dir: /app/user
+  ports:
+    - '80:80'
+    - '443:443'
+  volumes:
+    - './server.crt:/etc/nginx/server.crt'
+    - './server.key:/etc/nginx/server.key'
+shell:
+  build: .
+  command: bash
+  working_dir: /app/user
+  ports:
+    - '80:80'
+    - '443:443'
+  volumes:
+    - '.:/app/user'
+    - './server.crt:/etc/nginx/server.crt'
+    - './server.key:/etc/nginx/server.key'
