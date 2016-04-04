@@ -28,10 +28,10 @@ These results surprised & disappointed me. Loading individual modules over HTTP/
 
 |        | Average Load Time |
 |--------|-------------------|
-| HTTP/1 | 696.901 ms        |
+| HTTP/1 | 945.3511 ms       |
 | HTTP/2 | 579.9895 ms       |
 
-HTTP/2 was almost 15% faster at loading images than HTTP/1. I was still disappointed. I had seem [similar](http://www.http2demo.io/) [demos](https://http2.akamai.com/demo) which boasted a near 50% improvement. I'm going to blame these results on my server's lack of caching, but I will need to investigate further.
+HTTP/2 was almost 40% faster at loading images than HTTP/1.
 
 ## Conclusion
 
